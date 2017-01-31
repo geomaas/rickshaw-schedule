@@ -3,23 +3,34 @@
 <div class="available-box">
     <form>
         <fieldset class="form-group">
+            <!-- <label class="sr-only" for="inlineFormInput">Name</label> -->
+            <input ng-model="riderName" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 name-input" id="inlineFormInput" placeholder="Name">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input ng-model="companyName" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="rickshaw" checked> Rickshaw
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input ng-model="companyName" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="pedicab"> Pedicab
+            </div>
 
             <!-- monday shift -->
             <div class="shift-box mon-shift">
                 <div class="form-check form-check-inline">
                     <h1>Monday</h1>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="mon1"> 1 Shift
+                        <input ng-model="monShift1" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="mon1"> 1 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="mon2"> 2 Shift
+                        <input ng-model="monShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="mon2"> 2 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline disabled">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="mon3"> 3 Shift
+                        <input ng-model="monShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="mon3"> 3 Shift
                     </label>
                 </div>
             </div>
@@ -28,17 +39,17 @@
                 <div class="form-check form-check-inline">
                     <h1>Tuesday</h1>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="tues1"> 1 Shift
+                        <input ng-model="tueShift1" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="tues1"> 1 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="tues2"> 2 Shift
+                        <input ng-model="tueShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="tues2"> 2 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline disabled">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="tues3"> 3 Shift
+                        <input ng-model="tueShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="tues3"> 3 Shift
                     </label>
                 </div>
             </div>
@@ -47,17 +58,17 @@
                 <div class="form-check form-check-inline">
                     <h1>Wednesday</h1>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="wed1"> 1 Shift
+                        <input ng-model="wedShift1" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="wed1"> 1 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="wed2"> 2 Shift
+                        <input ng-model="wedShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="wed2"> 2 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline disabled">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="wed3"> 3 Shift
+                        <input ng-model="wedShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="wed3"> 3 Shift
                     </label>
                 </div>
             </div>
@@ -66,17 +77,17 @@
                 <div class="form-check form-check-inline">
                     <h1>Thursday</h1>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="thurs1"> 1 Shift
+                        <input ng-model="thursShift1" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="thurs1"> 1 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="thurs2"> 2 Shift
+                        <input ng-model="thursShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="thurs2"> 2 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline disabled">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="thurs3"> 3 Shift
+                        <input ng-model="thursShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="thurs3"> 3 Shift
                     </label>
                 </div>
             </div>
@@ -85,17 +96,17 @@
                 <div class="form-check form-check-inline">
                     <h1>Friday</h1>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="fri1"> 1 Shift
+                        <input ng-model="friShift1" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="fri1"> 1 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="fri2"> 2 Shift
+                        <input ng-model="friShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="fri2"> 2 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline disabled">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="fri3"> 3 Shift
+                        <input ng-model="friShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="fri3"> 3 Shift
                     </label>
                 </div>
             </div>
@@ -104,17 +115,17 @@
                 <div class="form-check form-check-inline">
                     <h1>Saturday</h1>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Sat1"> 1 Shift
+                        <input ng-model="satShift1" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Sat1"> 1 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Sat2"> 2 Shift
+                        <input ng-model="satShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Sat2"> 2 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline disabled">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Sat3"> 3 Shift
+                        <input ng-model="satShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Sat3"> 3 Shift
                     </label>
                 </div>
             </div>
@@ -123,22 +134,22 @@
                 <div class="form-check form-check-inline">
                     <h1>Sunday</h1>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="sun1"> 1 Shift
+                        <input ng-model="sunShift1" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="sun1"> 1 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="sun2"> 2 Shift
+                        <input ng-model="sunShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="sun2"> 2 Shift
                     </label>
                 </div>
                 <div class="form-check form-check-inline disabled">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="sun3"> 3 Shift
+                        <input ng-model="sunShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="sun3"> 3 Shift
                     </label>
                 </div>
             </div>
         </fieldset>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button ng-click="submitRiderSchedule()" type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

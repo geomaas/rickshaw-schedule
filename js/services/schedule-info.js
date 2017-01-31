@@ -1,22 +1,22 @@
 let mod = angular.module('ScheduleServices');
 
 mod.factory('ScheduleService', ['$http', function ($http) {
-    // let books = [];
+    let riders = [];
 
     return {
-        // /* GET request for book list */
-        // getBooks: function () {
-        //     $http({
-        //         method: 'get',
-        //         url: 'http://localhost:7000/library/books'
-        //     }).then(function (response) {
-        //         console.table(response.data.books);
-        //
-        //         angular.copy(response.data.books, books);
-        //     });
-        //
-        //     return books;
-        // },
+        /* GET request for book list */
+        getRiders: function () {
+            $http({
+                method: 'get',
+                url: 'http://tiny-tiny.herokuapp.com/collections/rickshaw',
+            }).then(function (response) {
+                console.table(response.data);
+
+                // angular.copy(response.data, books);
+            });
+
+            return riders;
+        },
         // /* POST request to update one book */
         // borrowBook: function (book) {
         //
