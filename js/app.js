@@ -23,4 +23,4 @@ require('./controllers/schedule-view');
 require('./services/schedule-info');
 
 /* Directives */
-// require('./directives/book');
+// require('./directives/blah');

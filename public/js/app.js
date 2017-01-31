@@ -38,7 +38,7 @@ require('./controllers/schedule-view');
 require('./services/schedule-info');
 
 /* Directives */
-// require('./directives/book');
+// require('./directives/blah');
 
 },{"./controllers/available":1,"./controllers/schedule-view":2,"./services/schedule-info":4}],4:[function(require,module,exports){
 let mod = angular.module('ScheduleServices');
