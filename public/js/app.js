@@ -4,6 +4,10 @@ let mod = angular.module('ScheduleControllers');
 mod.controller('AvailableController', ['$scope', '$location', '$http', 'ScheduleService', function($scope, $location, $http, ScheduleService) {
     $scope.riderName = '';
     $scope.companyName = '';
+    $scope.rickshawRiders = ScheduleService.getRickshawRiders();
+    console.log($scope.rickshawRiders,"testing receiving rickshaw rider info");
+    $scope.pedicabRiders = ScheduleService.getPedicabRiders();
+    console.log($scope.pedicabRiders, 'testing pedicab info');
 
     $scope.submitRiderSchedule = function() {
         var riderObj = {
@@ -20,16 +24,18 @@ mod.controller('AvailableController', ['$scope', '$location', '$http', 'Schedule
               sunday:{oneshift:$scope.sunShift1, twoshift: $scope.sunShift2, threeshift: $scope.sunShift3,},
             },
         }
-        console.log(riderObj);
+        // console.log(riderObj);
         $http({
             url: 'http://tiny-tiny.herokuapp.com/collections/rickshaw',
             method: 'post',
             data: JSON.stringify(riderObj)
         }).then(function(data) {
-            // $location.path('/schedule-view');
             console.table(data);
         }).catch(function() {
             console.error('availability error!!!');
+        });
+        $http({
+          
         });
     };
 }]);
@@ -38,7 +44,12 @@ mod.controller('AvailableController', ['$scope', '$location', '$http', 'Schedule
 let mod = angular.module('ScheduleControllers');
 
 mod.controller('ScheduleViewController', ['$scope', 'ScheduleService', function ($scope, ScheduleService) {
-    // $scope.books = BookService.getBooks();
+    $scope.rickshawRiders = ScheduleService.getRickshawRiders();
+    console.log($scope.rickshawRiders,"testing receiving rickshaw rider info");
+    $scope.pedicabRiders = ScheduleService.getPedicabRiders();
+    console.log($scope.pedicabRiders, 'testing pedicab info');
+
+
 }]);
 
 },{}],3:[function(require,module,exports){
@@ -73,30 +84,38 @@ require('./services/schedule-info');
 let mod = angular.module('ScheduleServices');
 
 mod.factory('ScheduleService', ['$http', function ($http) {
-    let riders = [];
+    let rickshawRiders = [];
+    let pedicabRiders = [];
 
     return {
-        /* GET request for book list */
-        getRiders: function () {
+        getRickshawRiders: function () {
             $http({
                 method: 'get',
                 url: 'http://tiny-tiny.herokuapp.com/collections/rickshaw',
             }).then(function (response) {
-                console.table(response.data);
-
-                // angular.copy(response.data, books);
+              let rickshawFilter = response.data.filter(function(x){
+                return x.companyName == "rickshaw";
+              });
+              // console.log(rickshawFilter,"rickshaw filter");
+                angular.copy(rickshawFilter, rickshawRiders);
             });
 
-            return riders;
+            return rickshawRiders;
         },
-        // /* POST request to update one book */
-        // borrowBook: function (book) {
-        //
-        // },
-        // /* POST request to update one book */
-        // returnBook: function (book) {
-        //
-        // },
+        getPedicabRiders: function () {
+            $http({
+                method: 'get',
+                url: 'http://tiny-tiny.herokuapp.com/collections/rickshaw',
+            }).then(function (response) {
+              let pedicabFilter = response.data.filter(function(x){
+                return x.companyName == "pedicab";
+              });
+                angular.copy(pedicabFilter, pedicabRiders);
+            });
+
+            return pedicabRiders;
+        },
+        
     };
 }]);
 

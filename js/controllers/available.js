@@ -3,6 +3,10 @@ let mod = angular.module('ScheduleControllers');
 mod.controller('AvailableController', ['$scope', '$location', '$http', 'ScheduleService', function($scope, $location, $http, ScheduleService) {
     $scope.riderName = '';
     $scope.companyName = '';
+    $scope.rickshawRiders = ScheduleService.getRickshawRiders();
+    console.log($scope.rickshawRiders,"testing receiving rickshaw rider info");
+    $scope.pedicabRiders = ScheduleService.getPedicabRiders();
+    console.log($scope.pedicabRiders, 'testing pedicab info');
 
     $scope.submitRiderSchedule = function() {
         var riderObj = {
@@ -19,16 +23,18 @@ mod.controller('AvailableController', ['$scope', '$location', '$http', 'Schedule
               sunday:{oneshift:$scope.sunShift1, twoshift: $scope.sunShift2, threeshift: $scope.sunShift3,},
             },
         }
-        console.log(riderObj);
+        // console.log(riderObj);
         $http({
             url: 'http://tiny-tiny.herokuapp.com/collections/rickshaw',
             method: 'post',
             data: JSON.stringify(riderObj)
         }).then(function(data) {
-            // $location.path('/schedule-view');
             console.table(data);
         }).catch(function() {
             console.error('availability error!!!');
+        });
+        $http({
+          
         });
     };
 }]);

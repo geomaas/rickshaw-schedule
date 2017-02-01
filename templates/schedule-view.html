@@ -1,82 +1,300 @@
-<h1>Schedule View</h1>
-<div class="calender-box">
-    <div class="day-box monday">
-      <h1>Monday</h1>
-        <div class="one-shift">
-            one shift
-        </div>
-        <div class="two-shift">
-            two shift
-        </div>
-        <div class="three-shift">
-            three shift
-        </div>
-    </div>
-    <div class="day-box tuesday">
-      <h1>Tuesday</h1>
-        <div class="one-shift">
-            one shift
-        </div>
-        <div class="two-shift">
-            two shift
-        </div>
-        <div class="three-shift">
-            three shift
-        </div>
-    </div>
-    <div class="day-box wednesday">
-      <h1>Wednesday</h1>
-        <div class="one-shift">
-            one shift
-        </div>
-        <div class="two-shift">
-            two shift
-        </div>
-        <div class="three-shift">
-            three shift
-        </div>
-    </div>
-    <div class="day-box thursday">
-      <h1>Thursday</h1>
-        <div class="one-shift">
-            one shift
-        </div>
-        <div class="two-shift">
-            two shift
-        </div>
-        <div class="three-shift">
-            three shift
-        </div>
-    </div>
-    <div class="day-box friday">
-      <h1>Friday</h1>
-        <div class="one-shift">
-            one shift
-        </div>
-        <div class="two-shift">
-            two shift
-        </div>
-        <div class="three-shift">
-            three shift
-        </div>
-    </div>
-    <div class="day-box saturday">
-      <h1>Saturday</h1>
-        <div class="one-shift">
-            one shift
-        </div>
-        <div class="two-shift two-shift-weekend">
-            two shift
-        </div>
+<div class="rickshaw">
+    <h1>Rickshaw request schedule </h1>
+    <div class="calender-box rickshaw-calender">
+        <!-- monday -->
+        <div class="day-box monday">
+            <h1>Monday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{monday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{monday:{twoshift: true}}}">{{info.riderName}}</li>
 
-    </div>
-    <div class="day-box sunday">
-      <h1>Sunday</h1>
-        <div class="one-shift">
-            one shift
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{monday:{threeshift: true}}}">{{info.riderName}}</li>
+
+                </ol>
+            </div>
         </div>
-        <div class=" two-shift two-shift-weekend">
-            two shift
+        <!-- tuesday -->
+        <div class="day-box tuesday">
+            <h1>Tuesday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{tuesday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{tuesday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{tuesday:{threeshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- wednesday -->
+        <div class="day-box wednesday">
+            <h1>Wednesday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{wednesday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{wednesday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{wednesday:{threeshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- thursday -->
+        <div class="day-box thursday">
+            <h1>Thursday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{thursday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{thursday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{thursday:{threeshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- friday -->
+        <div class="day-box friday">
+            <h1>Friday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{friday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{friday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{friday:{threeshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- saturday -->
+        <div class="day-box saturday">
+            <h1>Saturday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{saturday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift two-shift-weekend">
+                two shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{saturday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <div class="day-box sunday">
+            <!-- sunday -->
+            <h1>Sunday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{sunday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class=" two-shift two-shift-weekend">
+                two shift
+                <ol>
+                    <li ng-repeat="info in rickshawRiders | filter: {schedule:{sunday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pedicab request schedule markup  -->
+<div class="pedicab">
+    <h1>Pedicab request schedule</h1>
+    <div class="calender-box rickshaw-calender">
+        <!-- monday -->
+        <div class="day-box monday">
+            <h1>Monday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{monday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{monday:{twoshift: true}}}">{{info.riderName}}</li>
+
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{monday:{threeshift: true}}}">{{info.riderName}}</li>
+
+                </ol>
+            </div>
+        </div>
+        <!-- tuesday -->
+        <div class="day-box tuesday">
+            <h1>Tuesday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{tuesday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{tuesday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{tuesday:{threeshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- wednesday -->
+        <div class="day-box wednesday">
+            <h1>Wednesday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{wednesday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{wednesday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{wednesday:{threeshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- thursday -->
+        <div class="day-box thursday">
+            <h1>Thursday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{thursday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{thursday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{thursday:{threeshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- friday -->
+        <div class="day-box friday">
+            <h1>Friday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{friday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift">
+                two shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{friday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="three-shift">
+                three shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{friday:{threeshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- saturday -->
+        <div class="day-box saturday">
+            <h1>Saturday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{saturday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class="two-shift two-shift-weekend">
+                two shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{saturday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+        </div>
+        <div class="day-box sunday">
+            <!-- sunday -->
+            <h1>Sunday</h1>
+            <div class="one-shift">
+                one shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{sunday:{oneshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
+            <div class=" two-shift two-shift-weekend">
+                two shift
+                <ol>
+                    <li ng-repeat="info in pedicabRiders | filter: {schedule:{sunday:{twoshift: true}}}">{{info.riderName}}</li>
+                </ol>
+            </div>
         </div>
     </div>
 </div>

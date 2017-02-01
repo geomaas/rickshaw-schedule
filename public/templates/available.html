@@ -152,4 +152,17 @@
 
         <button ng-click="submitRiderSchedule()" type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+</div>
+<div class="edit-available-box">
+  <form>
+    <h1>delete your schedule request you dummy</h1>
+      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" >
+          <option selected>Choose...</option>
+          <option ng-repeat="info in rickshawRiders" value="{{info.riderName}}">{{info.riderName}}</option>
+
+      </select>
+      <button  type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
 </div>

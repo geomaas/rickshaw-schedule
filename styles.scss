@@ -30,7 +30,18 @@ body {
         // margin: 1%;
     }
 }
+.edit-available-box{
+  margin: 2%;
+}
 //////////////////// schedule view//////////////////////
+.rickshaw {
+  height: 100vh;
+  margin-bottom: 5%;
+}
+.pedicab{
+  height: 100vh;
+  margin-bottom: 5%;
+}
 .calender-box {
     width: 100%;
     height: 100vh;
@@ -41,7 +52,7 @@ body {
     .day-box {
         // background-color: lightgreen;
         width: 13%;
-        height: 90vh;
+        height: 100%;
         align-self: center;
         display: flex;
         flex-direction: column;
@@ -51,24 +62,28 @@ body {
             width: 100%;
             height: 25%;
             margin: auto;
+            overflow: scroll;
         }
         .two-shift {
             background-color: lightpink;
             width: 100%;
             height: 25%;
             margin: auto;
+            overflow: scroll;
         }
         .three-shift {
             background-color: lightpink;
             width: 100%;
             height: 25%;
             margin: auto;
+            overflow: scroll;
         }
         .two-shift-weekend {
             background-color: lightpink;
             width: 100%;
             height: 55%;
             margin: auto;
+            overflow: scroll;
         }
     }
 }
