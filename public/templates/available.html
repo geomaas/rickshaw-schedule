@@ -3,8 +3,9 @@
 <div class="available-box">
     <form>
         <fieldset class="form-group">
-            <!-- <label class="sr-only" for="inlineFormInput">Name</label> -->
             <input ng-model="riderName" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 name-input" id="inlineFormInput" placeholder="Name">
+            <input ng-model="riderNumber" type="tel" class="form-control mb-2 mr-sm-2 mb-sm-0 name-input" id="inlineFormInput" placeholder="Phone Number">
+
             <div class="form-check">
                 <label class="form-check-label">
                     <input ng-model="companyName" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="rickshaw" checked> Rickshaw
@@ -28,11 +29,7 @@
                         <input ng-model="monShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="mon2"> 2 Shift
                     </label>
                 </div>
-                <div class="form-check form-check-inline disabled">
-                    <label class="form-check-label">
-                        <input ng-model="monShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="mon3"> 3 Shift
-                    </label>
-                </div>
+
             </div>
             <!-- tuesday shift -->
             <div class="shift-box tue-shift">
@@ -47,11 +44,7 @@
                         <input ng-model="tueShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="tues2"> 2 Shift
                     </label>
                 </div>
-                <div class="form-check form-check-inline disabled">
-                    <label class="form-check-label">
-                        <input ng-model="tueShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="tues3"> 3 Shift
-                    </label>
-                </div>
+
             </div>
             <!-- wednesday shift -->
             <div class="shift-box wed-shift">
@@ -66,11 +59,7 @@
                         <input ng-model="wedShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="wed2"> 2 Shift
                     </label>
                 </div>
-                <div class="form-check form-check-inline disabled">
-                    <label class="form-check-label">
-                        <input ng-model="wedShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="wed3"> 3 Shift
-                    </label>
-                </div>
+
             </div>
             <!-- thursday shift -->
             <div class="shift-box thurs-shift">
@@ -85,11 +74,7 @@
                         <input ng-model="thursShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="thurs2"> 2 Shift
                     </label>
                 </div>
-                <div class="form-check form-check-inline disabled">
-                    <label class="form-check-label">
-                        <input ng-model="thursShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="thurs3"> 3 Shift
-                    </label>
-                </div>
+
             </div>
             <!-- friday shift -->
             <div class="shift-box fri-shift">
@@ -104,11 +89,7 @@
                         <input ng-model="friShift2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="fri2"> 2 Shift
                     </label>
                 </div>
-                <div class="form-check form-check-inline disabled">
-                    <label class="form-check-label">
-                        <input ng-model="friShift3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="fri3"> 3 Shift
-                    </label>
-                </div>
+
             </div>
             <!-- saturday shift -->
             <div class="shift-box sat-shift">
@@ -146,12 +127,16 @@
     </form>
 
 </div>
-<div class="edit-available-box">
+<div class="signup rickshaw-signup">
     <ul class="list-group rickshaw-list">
-        <li class="list-group-item" ng-repeat="info in rickshawRiders">{{info.riderName}}
+      <h1>Rickshaw Signed up</h1>
+        <li class="list-group-item" ng-repeat="info in rickshawRiders">{{info.riderName}} cell: {{info.riderNumber}}
             <button ng-click="deleteRider(info._id)" type="submit" class="btn btn-primary">Delete</button>
         </li>
     </ul>
+</div>
+<div class="signup pedicab-signup">
+  <h1>Pedicab Signed up</h1>
     <ul class="list-group pedicab-list">
         <li class="list-group-item" ng-repeat="info in pedicabRiders">{{info.riderName}}
             <button ng-click="deleteRider(info._id)" type="submit" class="btn btn-primary">Delete</button>

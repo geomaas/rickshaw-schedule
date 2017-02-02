@@ -1,6 +1,23 @@
 body {
   background-color: lightblue; }
 
+.available-box {
+  background-color: white;
+  width: 100vw; }
+  .available-box .shift-box {
+    background-color: lightgreen;
+    display: inline-block; }
+
+.signup {
+  display: inline-block;
+  width: 50vw; }
+  .signup ul {
+    margin: auto;
+    width: 75%; }
+
+.pedicab-signup {
+  float: right; }
+
 .rickshaw {
   height: 100vh;
   margin-bottom: 5%; }
@@ -17,7 +34,8 @@ body {
   flex-direction: row;
   justify-content: center; }
   .calender-box .day-box {
-    width: 13%;
+    background-color: lightgreen;
+    width: 14%;
     height: 100%;
     align-self: center;
     display: flex;
@@ -30,18 +48,6 @@ body {
       margin: auto;
       overflow: scroll; }
     .calender-box .day-box .two-shift {
-      background-color: lightpink;
-      width: 100%;
-      height: 25%;
-      margin: auto;
-      overflow: scroll; }
-    .calender-box .day-box .three-shift {
-      background-color: lightpink;
-      width: 100%;
-      height: 25%;
-      margin: auto;
-      overflow: scroll; }
-    .calender-box .day-box .two-shift-weekend {
       background-color: lightpink;
       width: 100%;
       height: 55%;
