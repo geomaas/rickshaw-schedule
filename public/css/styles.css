@@ -1,31 +1,6 @@
 body {
   background-color: lightblue; }
 
-.available-box {
-  background-color: white;
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-
-.form-group {
-  align-self: center;
-  background-color: lightpink;
-  width: 100vw; }
-  .form-group .custom-select {
-    display: block; }
-  .form-group .name-input {
-    display: inline-block;
-    margin: 1%;
-    width: 25%; }
-  .form-group .shift-box {
-    align-self: center;
-    display: inline-block;
-    background-color: lightgreen;
-    padding: 1%; }
-
-.edit-available-box {
-  margin: 2%; }
-
 .rickshaw {
   height: 100vh;
   margin-bottom: 5%; }

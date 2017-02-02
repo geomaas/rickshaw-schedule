@@ -2,37 +2,38 @@ body {
     background-color: lightblue;
 }
 //////////////////// available view/////////////////////
-.available-box {
-    background-color: white;
-    width: 100%;
-    // height: 90vh;
-    display: flex;
-    justify-content: center;
-}
-.form-group {
-    align-self: center;
-    background-color: lightpink;
-    // text-align: center;
-    width: 100vw;
-    .custom-select {
-        display: block;
-    }
-    .name-input {
-        display: inline-block;
-        margin: 1%;
-        width: 25%;
-    }
-    .shift-box {
-        align-self: center;
-        display: inline-block;
-        background-color: lightgreen;
-        padding: 1%;
-        // margin: 1%;
-    }
-}
-.edit-available-box{
-  margin: 2%;
-}
+// .available-box {
+//     background-color: white;
+//     width: 100%;
+//     // height: 90vh;
+//     display: flex;
+//     justify-content: center;
+// }
+// .form-group {
+//     align-self: center;
+//     background-color: lightpink;
+//     // text-align: center;
+//     height: 50vh;
+//     width: 50vw;
+//     .custom-select {
+//         display: block;
+//     }
+//     .name-input {
+//         display: inline-block;
+//         margin: 1%;
+//         width: 25%;
+//     }
+//     .shift-box {
+//         align-self: center;
+//         display: inline-block;
+//         background-color: lightgreen;
+//         padding: 1%;
+//         // margin: 1%;
+//     }
+// }
+// .edit-available-box{
+//   margin: 2%;
+// }
 //////////////////// schedule view//////////////////////
 .rickshaw {
   height: 100vh;
